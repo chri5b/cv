@@ -1,0 +1,65 @@
+<div class="well well-small">
+    <div class="row-fluid">
+        <div class="span9">
+            <h3>{{Experience}}</h3>
+        </div>
+        <div class="span3">
+            <form class="form-search">
+                <h3>
+                <input type="text" class="input-medium search-query" ng-model="query" placeholder="{{uiLabels.search}}"></h3>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" >
+    <table class="table table-striped">
+        <tbody>
+            <tr ng-repeat="experience in experiences | filter:query">
+                <td>
+                <div class="row-fluid" >
+                    <div class="span3">
+                        <div class="pull-right">
+                            <div class="toDate"><small class="muted">{{uiLabels.to}}: </small>{{experience.toDate}}</div>
+                            <div class="right company"><small class="muted">{{uiLabels.company}}:</small> {{experience.company}}</div>
+                            <div class="right"><small class="muted">{{uiLabels.location}}:</small> {{experience.location.city}}, {{experience.location.country}}</div>
+                            <div class="right"><small class="muted">{{uiLabels.from}}:</small> {{experience.fromDate}}</div>
+                        </div>
+                    </div>
+                    <div class="span8 offset1">
+                        <div class="experience-header"><h4>{{experience.title}} <small> - {{experience.product}}</small></h4></div>
+                        <div></div>
+                        <div title="problem"><span class="problem">{{experience.problem}}</span></div>
+                        <div title="solution"><span class="solution">{{experience.solution}}</span></div>
+
+                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible && query.length==0" class="btn btn-link"><i class="icon-chevron-up"></i>{{uiLabels.hideHighlights}}</button><button ng-show="!experience.highlightsVisible&& query.length==0" class="btn btn-link"><i class="icon-chevron-down"></i>{{uiLabels.showHighlights}}</button>
+                            <div ng-show="experience.highlightsVisible || query.length>0">
+                                <div class="highlight" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight">{{highlight.description}}</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight">
+                                            <div title="skills" class="skill" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="">{{skill.description}}</span>
+                                                </span>
+                                                <span ng-repeat="aspect in skill.aspects | filter:query" class="hide">{{aspect}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="query.length>0">
+                        <div>{{uiLabels.otherKeywords}}</div>
+                        <span class="skill" ng-repeat="otherSkill in experience.otherSkills | filter:query">{{otherSkill.description}}, <span  ng-repeat="aspect in otherSkill.aspects | filter:query" class="hide">{{aspect}}</span></span>
+
+                    </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

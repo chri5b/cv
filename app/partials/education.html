@@ -1,0 +1,46 @@
+<div class="well well-small">
+    <div class="row-fluid">
+        <div class="span9">
+            <h3>{{educationTitle}}</h3>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="span5">
+        <table class="table table-striped">
+            <tbody>
+            <tr ng-repeat="educationItem in education | filter:query">
+                <td>
+                    <div class="row-fluid">
+
+                        <div class="experience-header">
+                            <h4>{{educationItem.institution}}
+                                <small> - {{educationItem.location.city}}, {{educationItem.location.country}}</small>
+                            </h4>
+                        </div>
+                        <small class="muted">{{educationItem.toDate || "Present"}} - {{educationItem.fromDate}}</small>
+                        <div> {{educationItem.course}}</div>
+
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="span5">
+        <table class="table table-striped">
+            <tbody>
+            <tr ng-repeat="language in languages | filter:query">
+                <td>
+                    <div class="row-fluid">
+
+                        <div class="experience-header"><h4>{{language.name}}</h4></div>
+                        <div>{{language.level}}</div>
+
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
