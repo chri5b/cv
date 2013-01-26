@@ -7,14 +7,19 @@
 </div>
 <div class="container-fluid" >
     <div class="row-fluid">
-        I am a talented product manager with experience in
+        {{iam}}
     </div>
     <div class="row-fluid">
         <ul>
-            <li>Managing teams</li>
-            <li>Creating products from scratch which solve business problems</li>
-            <li>Managing relationships with external partners</li>
+            <li>
+                <a ng-href="#/experience?q={{peopleManagement}}">{{managingTeams}}</a>
+            </li>
+            <li><a ng-href="#/experience?q={{productCreation}}">{{creatingProducts}}</a>{{fromScratch}}</li>
+            <li><a ng-href="#/experience?q={{relationshipManagement}}">{{managingRelationships}}</a> {{withExternal}}</li>
         </ul>
+        <div>{{itake}} </div>
+        <div>{{imgood}} <a ng-href="#/experience?q={{roi}}">{{profitable}}</a> {{orwhat}} <a ng-href="#/experience?q={{agile}}">{{userStories}} </a>{{wouldSolve}} </div>
+        <div>{{imparticularly}}  <a ng-href="#/experience?q={{technical}}">{{technical}} </a>{{andthe}} <a ng-href="#/experience?q={{business}}">{{business}}</a>{{teamsand}}</div>
     </div>
-    <div>Click on one of the items above to see more information on that experience</div>
+    <div>{{asyouwould}} <a ng-href="#/experience?q={{functionalDesign}}">{{functionalDesign}}</a>, <a ng-href="#/experience?q={{projectManagement}}">{{projectManagement}}</a> {{and}}  <a ng-href="#/experience?q={{dataAnalysis}}">{{dataAnalysis}}</a> {{toname}}</div>
 </div>

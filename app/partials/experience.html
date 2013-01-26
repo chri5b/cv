@@ -1,7 +1,14 @@
 <div class="well well-small">
     <div class="row-fluid">
         <div class="span9">
-            <h3>{{Experience}}</h3>
+            <h3>
+                <span ng-show="!localeIsFrench()">{{query}}</span> <!-- Show query term in front of expérience (for English) -->
+                <span ng-show="!localeIsFrench() && !query" >{{Professional}}</span> <!--show professional in front of experience if there is no query (for English) -->
+                <span>{{Experience}}</span> <!--show localised text for Experience -->
+                <span ng-show="localeIsFrench() && !query" >{{Professional}}</span> <!--show professionel after experience if there is no query (for French) -->
+                <span ng-show="localeIsFrench() && query"> de {{query}}</span> <!--Show query term after experience (for French) -->
+                &nbsp  <button ng-show="query.length>0" class="btn btn-small btn-info" ng-click="clearQuery()">Show all</button> <!-- button -->
+            </h3>
         </div>
         <div class="span3">
             <form class="form-search">
@@ -31,7 +38,7 @@
                         <div title="problem"><span class="problem">{{experience.problem}}</span></div>
                         <div title="solution"><span class="solution">{{experience.solution}}</span></div>
 
-                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible && query.length==0" class="btn btn-link"><i class="icon-chevron-up"></i>{{uiLabels.hideHighlights}}</button><button ng-show="!experience.highlightsVisible&& query.length==0" class="btn btn-link"><i class="icon-chevron-down"></i>{{uiLabels.showHighlights}}</button>
+                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible && query.length==0" class="btn btn-link"><i class="icon-chevron-up"></i>{{uiLabels.hideHighlights}}</button><button ng-show="!experience.highlightsVisible && query.length==0" class="btn btn-link"><i class="icon-chevron-down"></i>{{uiLabels.showHighlights}}</button>
                             <div ng-show="experience.highlightsVisible || query.length>0">
                                 <div class="highlight" ng-repeat="highlight in experience.highlights | filter:query">
                                     <div class="row-fluid">
@@ -53,10 +60,13 @@
                             </div>
                         </div>
                         <div ng-show="query.length>0">
-                        <div>{{uiLabels.otherKeywords}}</div>
-                        <span class="skill" ng-repeat="otherSkill in experience.otherSkills | filter:query">{{otherSkill.description}}, <span  ng-repeat="aspect in otherSkill.aspects | filter:query" class="hide">{{aspect}}</span></span>
-
-                    </div>
+                        <span ng-repeat="otherSkill in experience.otherSkills | filter:query">
+                            <div ng-show="$first">{{uiLabels.otherKeywords}}</div>
+                            <span class="skill">{{otherSkill.description}}
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <span class="skill" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query">{{aspect}}</span></span>
+                        </div>
                     </div>
                 </td>
             </tr>
