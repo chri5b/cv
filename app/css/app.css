@@ -52,12 +52,12 @@ div {
 }
 
 .problem {
-    font-size:1.1em;
+    font-size:1.0em;
     font-weight:normal;
 }
 
 .solution {
-    font-size:1.1em;
+    font-size:1.0em;
     font-weight:normal;
 }
 
@@ -73,4 +73,15 @@ div {
 
 .right {
     text-align:right;
+}
+
+td p {
+    font-size: 14px;
+}
+
+.table td.noBorder {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    border-left-width:0px;
+    border-right-width:0px;
 }

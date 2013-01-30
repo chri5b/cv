@@ -6,14 +6,14 @@
                 <span ng-show="!localeIsFrench() && !query" >{{Professional}}</span> <!--show professional in front of experience if there is no query (for English) -->
                 <span>{{Experience}}</span> <!--show localised text for Experience -->
                 <span ng-show="localeIsFrench() && !query" >{{Professional}}</span> <!--show professionel after experience if there is no query (for French) -->
-                <span ng-show="localeIsFrench() && query"> de {{query}}</span> <!--Show query term after experience (for French) -->
-                &nbsp  <button ng-show="query.length>0" class="btn btn-small btn-info" ng-click="clearQuery()">Show all</button> <!-- button -->
+                <span ng-show="localeIsFrench() && query"> {{queryDescription}}</span> <!--Show query term after experience (for French) -->
+                &nbsp  <button ng-show="query.length>0" class="btn btn-small btn-info" ng-click="clearQuery()">{{uiLabels.showAll}}</button> <!-- button -->
             </h3>
         </div>
         <div class="span3">
             <form class="form-search">
                 <h3>
-                <input type="text" class="input-medium search-query" ng-model="query" placeholder="{{uiLabels.search}}"></h3>
+                <input type="text" class="input-medium search-query" ng-change="searchChanged()" ng-model="query" placeholder="{{uiLabels.search}}"></h3>
             </form>
         </div>
     </div>
