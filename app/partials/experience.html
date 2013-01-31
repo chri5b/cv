@@ -10,7 +10,7 @@
                 &nbsp  <button ng-show="query.length>0" class="btn btn-small btn-info" ng-click="clearQuery()">{{uiLabels.showAll}}</button> <!-- button -->
             </h3>
         </div>
-        <div class="span3">
+        <div class="span3 hidden-phone">
             <form class="form-search">
                 <h3>
                 <input type="text" class="input-medium search-query" ng-change="searchChanged()" ng-model="query" placeholder="{{uiLabels.search}}"></h3>
@@ -25,7 +25,7 @@
                 <td>
                 <div class="row-fluid" >
                     <div class="span3">
-                        <div class="pull-right">
+                        <div class="pull-right hidden-phone">
                             <div class="toDate"><small class="muted">{{uiLabels.to}}: </small>{{experience.toDate}}</div>
                             <div class="right company"><small class="muted">{{uiLabels.company}}:</small> {{experience.company}}</div>
                             <div class="right"><small class="muted">{{uiLabels.location}}:</small> {{experience.location.city}}, {{experience.location.country}}</div>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="span8 offset1">
                         <div class="experience-header"><h4>{{experience.title}} <small> - {{experience.product}}</small></h4></div>
-                        <div></div>
+                        <div class="visible-phone"><em>{{experience.company}} | {{experience.fromDate}} - {{experience.toDate}}</em></div>
                         <div title="problem"><span class="problem">{{experience.problem}}</span></div>
                         <div title="solution"><span class="solution">{{experience.solution}}</span></div>
 
@@ -48,8 +48,8 @@
                                             </ul>
 
                                         </div>
-                                        <div class="span4 highlight">
-                                            <div title="skills" class="skill" ng-repeat="skill in highlight.skills | filter:query">
+                                        <div class="span4 highlight hidden-phone">
+                                            <div title="skills" class="skill " ng-repeat="skill in highlight.skills | filter:query">
                                                 <span class="">{{skill.description}}</span>
                                                 </span>
                                                 <span ng-repeat="aspect in skill.aspects | filter:query" class="hide">{{aspect}}</span>
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div ng-show="query.length>0">
+                        <div ng-show="query.length>0" class="hidden-phone">
                         <span ng-repeat="otherSkill in experience.otherSkills | filter:query">
                             <div ng-show="$first">{{uiLabels.otherKeywords}}</div>
                             <span class="skill">{{otherSkill.description}}

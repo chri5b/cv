@@ -1,5 +1,5 @@
-body {
-    font-family: "Georgia",serif;
+body.mine {
+    margin-top:20px;
 }
 
 .menu {
@@ -75,7 +75,7 @@ div {
     text-align:right;
 }
 
-td p {
+td p, td div {
     font-size: 14px;
 }
 
@@ -86,6 +86,41 @@ td p {
     border-right-width:0px;
 }
 
-[ng\:cloak], [ng-cloak], .ng-cloak {
-    display: none;
+td p.emphasis {
+    font-size:18px;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    body.mine {
+        margin-top:0px;
+    }
+    h1, h2, h3 span {
+        font-size:18px;
+    }
+    div.experience-header h4 {
+        font-size:14px;
+    }
+    td p.emphasis, p.emphasis a{
+        font-size:14px;
+    }
+    p, div, li, a, span{
+        font-size:12px;
+    }
+    .problem, .solution {
+        font-size:12px;
+    }
+    td p, td div {
+        font-size:12px;
+    }
+    .well-small {
+        padding:0px;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+
+
 }
