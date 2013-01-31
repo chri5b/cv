@@ -22,8 +22,4 @@ app.run(function($rootScope,$locale) {
         {name:"English",value:"en"},
         {name:"Français",value:"fr"}
     ];
-
-
-
-
 });

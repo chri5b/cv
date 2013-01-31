@@ -20,12 +20,11 @@ function HeaderCtrl($scope,localisation,myLocaleBroadcaster,$location) {
         $scope.OtherInterests = localisation.localise($scope.locale,"index_other");
         $scope.email = localisation.localise($scope.locale,"index_email");
         $scope.linkedIn = localisation.localise($scope.locale,"index_linkedIn");
-    }
+    };
 
     $scope.updateLabels();
 
     $scope.changeLocale = function(locale) {
-        console.log(locale);
         myLocaleBroadcaster.prepForBroadcast(locale);
     };
 
@@ -41,6 +40,7 @@ function CompetenciesCtrl($scope,localisation,myLocaleBroadcaster) {
     $scope.subPage="partials/strengths.html";
 
     $scope.updateLabels = function() {
+
         $scope.CoreCompetencies = localisation.localise($scope.locale,"index_core_comp");
         $scope.competencies = [
             localisation.localise($scope.locale,"comp_translating_strategy"),
@@ -176,7 +176,7 @@ CompetenciesCtrl.$inject = ['$scope','localisation','myLocaleBroadcaster'];
 
 function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
 
-    $scope.query = $location.search().q || "";
+    $scope.query = "" || $location.search().q;
     $scope.queryDescription = $location.search().qd;
 
     $scope.searchChanged = function() {
@@ -201,7 +201,7 @@ function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
                 return true;
                 break;
             default:
-                return false
+                return false;
              break;
         }
     };
@@ -508,19 +508,19 @@ function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
                     ]
             }
         ];
-    }
+    };
 
     $scope.updateLabels();
 
     $scope.clearQuery = function() {
         $scope.query = "";
         $location.search("q","");
-    }
+    };
 
     $scope.$on('localeChanged', function() {
         $scope.locale = myLocaleBroadcaster.locale;
         $scope.updateLabels();
-    })
+    });
 
 
     $scope.toggleHighlights = function(experienceId) {
@@ -596,7 +596,7 @@ function OtherCtrl($scope,localisation,myLocaleBroadcaster) {
         $scope.openSource = localisation.localise($scope.locale,"other_openSource");
         $scope.plugin = localisation.localise($scope.locale,"other_plugin");
         $scope.asASearchTerm = localisation.localise($scope.locale,"other_asASearch");
-    }
+    };
 
     $scope.updateLabels();
 

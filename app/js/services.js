@@ -20,7 +20,7 @@ var myAppServices = angular.module('myApp.services', []).
                 case "fr":
                     //return English if there's nothing defined for French
                     if (!this.french[key]) {
-                        console.log("No french localisation for "+ key);
+                        //console.log("No french localisation for "+ key);
                         return this.localiseToEnglish(key);
 
                     } else {
@@ -602,7 +602,7 @@ var myAppServices = angular.module('myApp.services', []).
         localiseToEnglish: function(key) {
             var value = this.english[key];
             if (!value) {
-                console.log("No english localisation for "+ key);
+                //console.log("No english localisation for "+ key);
                 return key;
             } else {
                 return this.english[key];
