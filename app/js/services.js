@@ -263,6 +263,7 @@ var myAppServices = angular.module('myApp.services', []).
             sk_soap:"SOAP",
             sk_webServices:"Services Web",
             sk_insurance:"Assurance",
+            sk_deInsurance:"d'Assurance",
             sk_claimsManagement:"Gestion de sinistres",
             sk_documentManagement:"Gestion de Documents",
             sk_bpm:"Business Process Re-engineering",

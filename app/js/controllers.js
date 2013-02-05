@@ -392,6 +392,7 @@ function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
                             skills: [
                                 {description:localisation.localise($scope.locale,"sk_productRoadmap"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                                 {description:localisation.localise($scope.locale,"sk_clientContact"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
+                                {description:localisation.localise($scope.locale,"sk_useCases"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                                 {description:localisation.localise($scope.locale,"sk_requirementsGathering"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                                 {description:localisation.localise($scope.locale,"sk_prioritisation"),aspects:[localisation.localise($scope.locale,"aspect_business")]}
                             ],
@@ -436,6 +437,7 @@ function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
                             skills: [
                                 {description:localisation.localise($scope.locale,"sk_functionalDesign"),aspects:[localisation.localise($scope.locale,"aspect_business"),localisation.localise($scope.locale,"aspect_productCreation")]},
                                 {description:localisation.localise($scope.locale,"sk_brd"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
+                                {description:localisation.localise($scope.locale,"sk_useCases"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                                 {description:localisation.localise($scope.locale,"sk_mrd"),aspects:[localisation.localise($scope.locale,"aspect_business"),localisation.localise($scope.locale,"aspect_productCreation")]},
                                 {description:localisation.localise($scope.locale,"sk_userInterfaceDesign"),aspects:[localisation.localise($scope.locale,"aspect_technical"),localisation.localise($scope.locale,"aspect_ui")]}
                             ],
@@ -495,7 +497,7 @@ function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
                                 {description:localisation.localise($scope.locale,"sk_userWorkshop"),aspects:[localisation.localise($scope.locale,"aspect_relationshipManagement"),localisation.localise($scope.locale,"aspect_business")]},
                                 {description:localisation.localise($scope.locale,"sk_uml"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                                 {description:localisation.localise($scope.locale,"sk_flowDiagrams"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
-                                {description:localisation.localise($scope.locale,"sk_userAcceptanceTesting"),aspects:[localisation.localise($scope.locale,"aspect_business")]}
+                                {description:localisation.localise($scope.locale,"sk_uat"),aspects:[localisation.localise($scope.locale,"aspect_business")]}
                             ],
 
                             description: localisation.localise($scope.locale,"high15_description")

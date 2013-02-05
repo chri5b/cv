@@ -1,6 +1,6 @@
 <div class="well well-small">
     <div class="row-fluid">
-        <div class="span9">
+        <div class="span8">
             <h3>
                 <span ng-show="!localeIsFrench()">{{query}}</span> <!-- Show query term in front of expérience (for English) -->
                 <span ng-show="!localeIsFrench() && !query" >{{Professional}}</span> <!--show professional in front of experience if there is no query (for English) -->
@@ -10,8 +10,15 @@
                 &nbsp  <button ng-show="query.length>0" class="btn btn-small btn-info" ng-click="clearQuery()">{{uiLabels.showAll}}</button> <!-- button -->
             </h3>
         </div>
-        <div class="span3 hidden-phone">
-            <form class="form-search">
+
+        <div class="span4 visible-desktop">
+            <form class="form-search pull-right">
+                <h3>
+                    <input type="text" class="input search-query" ng-change="searchChanged()" ng-model="query" placeholder="{{uiLabels.search}}"></h3>
+            </form>
+        </div>
+        <div class="span4 visible-tablet">
+            <form class="form-search pull-right">
                 <h3>
                 <input type="text" class="input-medium search-query" ng-change="searchChanged()" ng-model="query" placeholder="{{uiLabels.search}}"></h3>
             </form>
