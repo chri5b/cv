@@ -3,10 +3,10 @@
         <p>{{twelveYears}}</p>
     </li>
     <li>
-        <p>{{complex}} <a ng-href="#/experience?q={{Api}}&qd={{deApi}}">{{Api}}</a> {{productsRequiring}}</p>
+        <p>{{complex}} <a ng-click="goTo('/experience',Api,deApi)">{{Api}}</a> {{productsRequiring}}</p>
     </li>
     <li>
-        <p>{{highlyConfigurable}} <a ng-href="#/experience?q={{workflow}}&qd={{deWorkflow}}">{{workflow}}</a> {{and}} <a ng-href="#/experience?q={{rulesEngines}}&qd={{deRulesEngines}}">{{rulesEngines}}</a></p>
+        <p>{{highlyConfigurable}} <a ng-click="goTo('/experience',workflow,deWorkflow)">{{workflow}}</a> {{and}} <a ng-click="goTo('/experience',rulesEngines,deRulesEngines)">{{rulesEngines}}</a></p>
     </li>
 </ul>
 

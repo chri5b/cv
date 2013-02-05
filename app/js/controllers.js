@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-function HeaderCtrl($scope,localisation,myLocaleBroadcaster,$location) {
+function HeaderCtrl($scope,localisation,myLocaleBroadcaster,$location,myLocationBroadcaster) {
     $scope.FullName = "Chris Barrett";
 
     $scope.location = $location.path();
@@ -32,10 +32,14 @@ function HeaderCtrl($scope,localisation,myLocaleBroadcaster,$location) {
         $scope.locale = myLocaleBroadcaster.locale;
         $scope.updateLabels();
     })
-}
-HeaderCtrl.$inject = ['$scope','localisation','myLocaleBroadcaster','$location'];
 
-function CompetenciesCtrl($scope,localisation,myLocaleBroadcaster) {
+    $scope.$on('locationChanged', function() {
+        $scope.location = myLocationBroadcaster.location;
+    })
+}
+HeaderCtrl.$inject = ['$scope','localisation','myLocaleBroadcaster','$location','myLocationBroadcaster'];
+
+function CompetenciesCtrl($scope,localisation,myLocaleBroadcaster,$location,myLocationBroadcaster) {
 
     $scope.subPage="partials/strengths.html";
 
@@ -156,11 +160,17 @@ function CompetenciesCtrl($scope,localisation,myLocaleBroadcaster) {
         $scope.clientCommunication = localisation.localise($scope.locale,"sk_clientContact");
         $scope.gapAnalysis = localisation.localise($scope.locale,"comp_gapAnalysis");
         $scope.revenueTracking = localisation.localise($scope.locale,"comp_revenueTracking");
-
-
     };
 
     $scope.updateLabels();
+
+    $scope.goTo = function(path,filter,filterDescription) {
+        $scope.location = path;
+        myLocationBroadcaster.prepForBroadcast(path);
+        $location.search('q',filter);
+        $location.search('qd',filterDescription);
+        $location.path(path);
+    }
 
     $scope.$on('localeChanged', function() {
         $scope.locale = myLocaleBroadcaster.locale;
@@ -172,7 +182,7 @@ function CompetenciesCtrl($scope,localisation,myLocaleBroadcaster) {
     };
 
 }
-CompetenciesCtrl.$inject = ['$scope','localisation','myLocaleBroadcaster'];
+CompetenciesCtrl.$inject = ['$scope','localisation','myLocaleBroadcaster','$location','myLocationBroadcaster'];
 
 function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
 
@@ -303,6 +313,7 @@ function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
                         {description:localisation.localise($scope.locale,"sk_financialMarkets"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                         {description:localisation.localise($scope.locale,"sk_wealthManagement"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                         {description:localisation.localise($scope.locale,"sk_exchangeData"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
+                        {description:localisation.localise($scope.locale,"sk_marketData"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                         {description:localisation.localise($scope.locale,"sk_crossSymbology"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                         {description:localisation.localise($scope.locale,"sk_reuters"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                         {description:localisation.localise($scope.locale,"sk_timeSeries"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
@@ -314,6 +325,7 @@ function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
                         {description:localisation.localise($scope.locale,"sk_responsiveDesign"),aspects:[localisation.localise($scope.locale,"aspect_technical"),localisation.localise($scope.locale,"aspect_ui")]},
                         {description:localisation.localise($scope.locale,"sk_restfulApiDesign"),aspects:[localisation.localise($scope.locale,"aspect_technical"),localisation.localise($scope.locale,"aspect_api")]},
                         {description:localisation.localise($scope.locale,"sk_openSocial"),aspects:[localisation.localise($scope.locale,"aspect_technical")]},
+                        {description:localisation.localise($scope.locale,"comp_userStory"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                         {description:localisation.localise($scope.locale,"sk_htmlWidget"),aspects:[localisation.localise($scope.locale,"aspect_technical")]},
                         {description:localisation.localise($scope.locale,"sk_appStore"),aspects:[localisation.localise($scope.locale,"aspect_business")]},
                         {description:localisation.localise($scope.locale,"sk_dataVisualisation"),aspects:[localisation.localise($scope.locale,"aspect_ui")]},

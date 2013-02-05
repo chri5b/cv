@@ -38,7 +38,7 @@
                         <div title="problem"><span class="problem">{{experience.problem}}</span></div>
                         <div title="solution"><span class="solution">{{experience.solution}}</span></div>
 
-                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible && query.length==0" class="btn btn-link"><i class="icon-chevron-up"></i>{{uiLabels.hideHighlights}}</button><button ng-show="!experience.highlightsVisible && query.length==0" class="btn btn-link"><i class="icon-chevron-down"></i>{{uiLabels.showHighlights}}</button>
+                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible && (!query || query.length==0)" class="btn btn-link"><i class="icon-chevron-up"></i>{{uiLabels.hideHighlights}}</button><button ng-show="!experience.highlightsVisible && (!query || query.length==0)" class="btn btn-link"><i class="icon-chevron-down"></i>{{uiLabels.showHighlights}}</button>
                             <div ng-show="experience.highlightsVisible || query.length>0">
                                 <div class="highlight" ng-repeat="highlight in experience.highlights | filter:query">
                                     <div class="row-fluid">

@@ -5,8 +5,8 @@
                 <h5>{{insurance}}</h5>
             </td>
             <td>
-                <p><a ng-href="#/experience?q={{insurance}}&qd={{deInsurance}}">{{commercialInsurance}}</a></p>
-                <p><a ng-href="#/experience?q={{insurance}}&qd={{deInsurance}}">{{coInsurance}}</a></p>
+                <p><a ng-click="goTo('/experience',insurance,deInsurance)">{{commercialInsurance}}</a></p>
+                <p><a ng-click="goTo('/experience',insurance,deInsurance)">{{coInsurance}}</a></p>
             </td>
         </tr>
         <tr>
@@ -14,8 +14,8 @@
                 <h5>{{financialMarkets}}</h5>
             </td>
             <td>
-                <p><a ng-href="#/experience?q={{marketData}}&qd={{deMarketData}}">{{marketData}}</a></p>
-                <p><a ng-href="#/experience?q={{wealthManagement}}&qd={{deWealthManagement}}">{{wealthManagement}}</a></p>
+                <p><a ng-click="goTo('/experience',marketData,deMarketData)">{{marketData}}</a></p>
+                <p><a ng-click="goTo('/experience',wealthManagement,deWealthManagement)">{{wealthManagement}}</a></p>
                 <p>{{onlineInvestmentTools}}</p>
                 <p>{{retailInvestors}}</p>
                 <p>{{selfDirectedInvestors}}</p>

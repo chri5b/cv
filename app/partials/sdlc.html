@@ -5,8 +5,8 @@
                 <h5>{{planning}}</h5>
             </td>
             <td>
-                <p><a ng-href="#/experience?q={{projectManagement}}&qd={{deProjectManagement}}">{{projectManagement}}</a></p>
-                <p><a ng-href="#/experience?q={{mrd}}&qd={{deMrd}}">Market Requirements Document</a></p>
+                <p><a ng-click="goTo('/experience',projectManagement,deProjectManagement)">{{projectManagement}}</a></p>
+                <p><a ng-click="goTo('/experience',mrd,deMrd)">Market Requirements Document</a></p>
             </td>
         </tr>
         <tr>
@@ -14,9 +14,9 @@
                 <h5>{{requirementsAnalysis}}</h5>
             </td>
             <td>
-                <p><a ng-href="#/experience?q={{requirementsAnalysis}}&qd={{deRequirementsAnalysis}}">{{requirementsAnalysis}}</a></p>
-                <p><a ng-href="#/experience?q={{userStory}}&qd={{deUserStory}}">{{userStories}}</a> <a ng-href="#/experience?q={{prioritisation}}&qd={{dePrioritisation}}">{{prioritisation}}</a></p>
-                <p><a ng-href="#/experience?q={{mvp}}&qd={{deMvp}}">{{mvp}}</a></p>
+                <p><a ng-click="goTo('/experience',requirementsAnalysis,deRequirementsAnalysis)">{{requirementsAnalysis}}</a></p>
+                <p><a ng-click="goTo('/experience',userStory,deUserStory)">{{userStories}}</a> <a ng-click="goTo('/experience',prioritisation,dePrioritisation)">{{prioritisation}}</a></p>
+                <p><a ng-click="goTo('/experience',mvp,deMvp)">{{mvp}}</a></p>
             </td>
         </tr>
         <tr>
@@ -24,9 +24,9 @@
                 <h5>{{design}}</h5>
             </td>
             <td>
-                <p><a ng-href="#/experience?q={{functionalDesign}}&qd={{deFunctionalDesign}}">{{functionalDesign}}</a></p>
-                <p><a ng-href="#/experience?q={{userStory}}&qd={{deUserStory}}">{{userStory}}</a></p>
-                <p><a ng-href="#/experience?q={{useCases}}&qd={{deUseCases}}">{{useCases}}</a></p>
+                <p><a ng-click="goTo('/experience',functionalDesign,deFunctionalDesign)">{{functionalDesign}}</a></p>
+                <p><a ng-click="goTo('/experience',userStory,deUserStory)">{{userStory}}</a></p>
+                <p><a ng-click="goTo('/experience',useCases,deUseCases)">{{useCases}}</a></p>
             </td>
         </tr>
         <tr>
@@ -43,8 +43,8 @@
                 <h5>{{implementation}}</h5>
             </td>
             <td>
-                <p><a ng-href="#/experience?q={{uat}}&qd={{deUat}}">{{uat}}</a></p>
-                <p><a ng-href="#/experience?q={{marketing}}&qd={{deMarketing}}">{{marketing}}</a></p>
+                <p><a ng-click="goTo('/experience',uat,deUat)">{{uat}}</a></p>
+                <p><a ng-click="goTo('/experience',marketing,deMarketing)">{{marketing}}</a></p>
                 <p>{{supportTraining}}</p>
                 <p>{{salesTraining}}</p>
             </td>

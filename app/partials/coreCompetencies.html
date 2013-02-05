@@ -18,10 +18,10 @@
                     <div class="row-fluid">
                         <ul>
                             <li>
-                                <p class="emphasis"><a ng-href="#/experience?q={{peopleManagement}}&qd={{dePeopleManagement}}">{{managingTeams}}</a></p>
+                                <p class="emphasis"><a ng-click="goTo('/experience',peopleManagement,dePeopleManagement)">{{managingTeams}}</a></p>
                             </li>
-                            <li><p class="emphasis"><a ng-href="#/experience?q={{productCreation}}&qd={{deProductCreation}}">{{creatingProducts}}</a>{{fromScratch}}</p></li>
-                            <li><p class="emphasis"><a ng-href="#/experience?q={{relationshipManagement}}&qd={{deRelationshipManagement}}">{{managingRelationships}}</a> {{withExternal}}</p></li>
+                            <li><p class="emphasis"><a ng-click="goTo('/experience',productCreation,deProductCreation)">{{creatingProducts}}</a>{{fromScratch}}</p></li>
+                            <li><p class="emphasis"><a ng-click="goTo('/experience',relationshipManagement,deRelationshipManagement)">{{managingRelationships}}</a> {{withExternal}}</p></li>
                         </ul>
                     </div>
                     <div></div>
