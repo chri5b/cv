@@ -176,7 +176,7 @@ var myAppServices = angular.module('myApp.services', []).
             exp3_city:"New York",
             exp3_title:"Chef de Produit",
             exp3_product:"Underwriting Process Manager",
-            exp3_problem:"",
+            exp3_problem:" ",
             exp3_solution:"Le produit réduit les coûts et les erreurs dans les processus d’assurance commerciale en réduisant les recopiages de données et en rendant automatiques certaines des étapes d’évaluation des risques.",
             exp4_fromDate:"Fev 2000",
             exp4_toDate:"Aug 2005",
