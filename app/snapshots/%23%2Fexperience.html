@@ -1,0 +1,905 @@
+<!DOCTYPE html><html lang="en" xmlns:ng="http://angularjs.org" ng-app="myApp" id="ng-app" class="ng-scope"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="Bilingual Paris-based product owner with 10 years experience">
+    <meta name="description" content="Chef de Produit bilingue et exp+®riment+®">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Barrett">
+    <title>Chris Barrett CV</title>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="lib/lib.min.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style>
+    <!-- <script src="lib/angular/angular.js"></script> -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/darkstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <!--[if lte IE 8]>
+    <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+
+        // Optionally these for CSS
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38680201-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body class="mine">
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10 ng-scope" ng-controller="HeaderCtrl">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span6">
+                    <h1 ng-bind="FullName" class="ng-binding">Chris Barrett</h1>
+                    <h6 ng-bind="Summary" class="ng-binding">Bilingual Head of Product Management based in Paris, France</h6><h6 ng-hide="true" style="display: none; ">Loading...</h6>
+                    <div class="visible-phone">
+                        <div>
+                            <small><span ng-bind="email + ': '" class="ng-binding">Email: </span><a href="http://www.google.com/recaptcha/mailhide/d?k=01LdVjdCDnnQl5iIU-dnrfog==&amp;c=EWXnTwUeKwdK15-guKvu2YWL6LlnEOHYR2hMFiC_l5U=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501LdVjdCDnnQl5iIU-dnrfog\75\75\46c\75EWXnTwUeKwdK15-guKvu2YWL6LlnEOHYR2hMFiC_l5U\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...@chrisbarrett.fr</a></small>
+                        </div>
+                        <div><small><a href="http://www.linkedin.com/profile/view?id=14811446&amp;trk=tab_pro" ng-bind="linkedIn" class="ng-binding">LinkedIn Profile</a></small></div>
+                        <div><small>
+                            <select class="input-small ng-pristine ng-valid" ng-model="locale" ng-options="locale.value as locale.name for locale in locales" ng_change="changeLocale(locale)"><option value="0" selected="selected">English</option><option value="1">Fran+ºais</option></select></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4 offset2 hidden-phone">
+                    <div class="row-fluid">
+                        <div class="pull-right">
+                            <span ng-bind="email + ': '" class="ng-binding">Email: </span><a href="http://www.google.com/recaptcha/mailhide/d?k=01DAvhPDlNQIRklgvSGdL5oA==&amp;c=cRNL1UYNTzZx5wPAH2YMC6QDU39j-FY6yR_QhtwMw_8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501DAvhPDlNQIRklgvSGdL5oA\75\75\46c\75cRNL1UYNTzZx5wPAH2YMC6QDU39j-FY6yR_QhtwMw_8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...@chrisbarrett.fr</a>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="pull-right"><a href="http://www.linkedin.com/profile/view?id=14811446&amp;trk=tab_pro" ng-bind="linkedIn" class="ng-binding">LinkedIn Profile</a></div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="pull-right">
+                            <select class="input-medium ng-pristine ng-valid" ng-model="locale" ng-options="locale.value as locale.name for locale in locales" ng_change="changeLocale(locale)"><option value="0" selected="selected">English</option><option value="1">Fran+ºais</option></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <ul class="nav nav-tabs">
+                    <li ng-class="{active:location=='/coreCompetencies'}"><a ng-click="goTo('/coreCompetencies')" ng-bind="CoreCompetencies" href="" class="ng-binding">Core Competencies</a></li>
+                    <li ng-class="{active:location=='/experience'}" class="active"><a ng-click="goTo('/experience')" ng-bind="Experience" href="" class="ng-binding">Experience</a></li>
+                    <li ng-class="{active:location=='/education'}"><a ng-click="goTo('/education')" ng-bind="Education" href="" class="ng-binding">Education and Languages</a></li>
+                    <li ng-class="{active:location=='/otherInterests'}"><a ng-click="goTo('/otherInterests')" ng-bind="OtherInterests" href="" class="ng-binding">Other Interests</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+        <div class="span12" ng-view=""><div class="well well-small ng-scope">
+    <div class="row-fluid">
+        <div class="span8">
+            <h3>
+                <span ng-show="!localeIsFrench()" class="ng-binding"></span> <!-- Show query term in front of exp+®rience (for English) -->
+                <span ng-show="!localeIsFrench() &amp;&amp; !query" class="ng-binding">Professional</span> <!--show professional in front of experience if there is no query (for English) -->
+                <span class="ng-binding">Experience</span> <!--show localised text for Experience -->
+                <span ng-show="localeIsFrench() &amp;&amp; !query" class="ng-binding" style="display: none; ">Professional</span> <!--show professionel after experience if there is no query (for French) -->
+                <span ng-show="localeIsFrench() &amp;&amp; query" class="ng-binding" style="display: none; "> </span> <!--Show query term after experience (for French) -->
+                &nbsp;  <button ng-show="query.length&gt;0" class="btn btn-small btn-info ng-binding" ng-click="clearQuery()" style="display: none; ">Show all experience</button> <!-- button -->
+            </h3>
+        </div>
+
+        <div class="span4 visible-desktop">
+            <form class="form-search pull-right ng-pristine ng-valid">
+                <h3>
+                    <input type="text" class="input search-query ng-pristine ng-valid" ng-change="searchChanged()" ng-model="query" placeholder="Search"></h3>
+            </form>
+        </div>
+        <div class="span4 visible-tablet">
+            <form class="form-search pull-right ng-pristine ng-valid">
+                <h3>
+                <input type="text" class="input-medium search-query ng-pristine ng-valid" ng-change="searchChanged()" ng-model="query" placeholder="Search"></h3>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid ng-scope">
+    <table class="table table-striped">
+        <tbody>
+            <!-- ngRepeat: experience in experiences | filter:query --><tr ng-repeat="experience in experiences | filter:query" class="ng-scope">
+                <td>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="pull-right hidden-phone">
+                            <div class="toDate ng-binding"><small class="muted ng-binding">To: </small>Present</div>
+                            <div class="right company ng-binding"><small class="muted ng-binding">Company:</small> Thomson Reuters</div>
+                            <div class="right ng-binding"><small class="muted ng-binding">Location:</small> Paris, France</div>
+                            <div class="right ng-binding"><small class="muted ng-binding">From:</small> Nov 2012</div>
+                        </div>
+                    </div>
+                    <div class="span8 offset1">
+                        <div class="experience-header"><h4 class="ng-binding">Product Owner <small class="ng-binding"> - Wealth Management App Store</small></h4></div>
+                        <div class="visible-phone"><em class="ng-binding">Thomson Reuters | Nov 2012 - Present</em></div>
+                        <div title="problem"><span class="problem ng-binding">The banks and online brokerages who are our clients struggle to create compelling investment tools for their retail investors.</span></div>
+                        <div title="solution"><span class="solution ng-binding">The App Store enables third party developers to build HTML5 widgets for use in desktop and mobile browsers to solve this problem</span></div>
+
+                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible &amp;&amp; (!query || query.length==0)" class="btn btn-link ng-binding" style="display: none; "><i class="icon-chevron-up"></i>Hide</button><button ng-show="!experience.highlightsVisible &amp;&amp; (!query || query.length==0)" class="btn btn-link ng-binding"><i class="icon-chevron-down"></i>Show</button>
+                            <div ng-show="experience.highlightsVisible || query.length&gt;0" style="display: none; ">
+                                <!-- ngRepeat: highlight in experience.highlights | filter:query --><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Managed a team of three product managers to define the agile backlog and direct the efforts of 20 offshore developers working on the project</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Agile</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query -->
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">SCRUM</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query -->
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Product Owner</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Product Creation</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">People Management</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">People Management</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Negotiated expectations on scope, timing and resource requirements with key stakeholders</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Project management</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Project Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Stakeholder Management</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Project Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Expectation Management</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Project Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Developed and refined a detailed financial model in Excel to support the ROI case for investment</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">ROI analysis</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Data Analysis</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Excel</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Data Analysis</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Financial modelling</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Data Analysis</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Managed the creation of a partner program to engage 3rd party developers including StockTwits, eToro, Actiance</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Partner program</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Relationship Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Documentation</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query -->
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Relationship management</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Relationship Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Presented to senior client decision-makers at E*Trade, Ameriprise, BNP Paribas, BBVA in order to obtain feedback</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Presentation skills</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Client contact</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Relationship Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Requirements gathering</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Drove cross-organisation discussions on pricing strategy</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Pricing Strategy</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Data Analysis</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Cross-functional collaboration</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="query.length&gt;0" class="hidden-phone" style="display: none; ">
+                        <!-- ngRepeat: otherSkill in experience.otherSkills | filter:query --><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding">Other Keywords</div>
+                            <span class="skill ng-binding">Financial Markets
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Wealth Management
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Exchange Data
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Market Data
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Cross-symbology
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Reuters
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Time-Series
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Fundamentals
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Quote
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">News
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">CSS3
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">UI Design</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">HTML5
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">UI Design</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Responsive Design
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">UI Design</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">RESTful API Design
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">API</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">OpenSocial
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">User Story
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">HTML Widget
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">App Store
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Data Visualisation
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">UI Design</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Books and Records
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">API</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Data Mashups
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">API</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">MS Access
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Data Analysis</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">MS SQL Server
+                                <span ng-hide="$last" class="skill" style="display: none; ">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Data Analysis</span></span>
+                        </div>
+                    </div>
+                </div></td>
+            </tr><tr ng-repeat="experience in experiences | filter:query" class="ng-scope">
+                <td>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="pull-right hidden-phone">
+                            <div class="toDate ng-binding"><small class="muted ng-binding">To: </small>Oct 2010</div>
+                            <div class="right company ng-binding"><small class="muted ng-binding">Company:</small> Thomson Reuters</div>
+                            <div class="right ng-binding"><small class="muted ng-binding">Location:</small> London, England</div>
+                            <div class="right ng-binding"><small class="muted ng-binding">From:</small> Sep 2007</div>
+                        </div>
+                    </div>
+                    <div class="span8 offset1">
+                        <div class="experience-header"><h4 class="ng-binding">Product Manager <small class="ng-binding"> - Thomson Reuters Knowledge Direct API</small></h4></div>
+                        <div class="visible-phone"><em class="ng-binding">Thomson Reuters | Sep 2007 - Oct 2010</em></div>
+                        <div title="problem"><span class="problem ng-binding">600 financial institutions globally, including Barclays, Credit Agricole and BNP Paribas, who publish market data on their websites use this SaaS solution.</span></div>
+                        <div title="solution"><span class="solution ng-binding">Annual revenue is $120M and the product serves over 500M requests per month.</span></div>
+
+                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible &amp;&amp; (!query || query.length==0)" class="btn btn-link ng-binding" style="display: none; "><i class="icon-chevron-up"></i>Hide</button><button ng-show="!experience.highlightsVisible &amp;&amp; (!query || query.length==0)" class="btn btn-link ng-binding"><i class="icon-chevron-down"></i>Show</button>
+                            <div ng-show="experience.highlightsVisible || query.length&gt;0" style="display: none; ">
+                                <!-- ngRepeat: highlight in experience.highlights | filter:query --><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Conducted profitability analysis of client-base in order to determine how pricing structure should change</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Profitability Analysis</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Data Analysis</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Pricing Strategy</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Data Analysis</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Defined pricing, support and order fulfilment processes for a number of product improvements</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Order to Cash Process</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Release Notes</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Marketing</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Commercial Strategy</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Managed product launch activities, creating marketing materials, training the global sales team and ensuring that support technicians were ready to field customer queries</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Product Launch</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Cross-functional collaboration</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Sales support</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Support</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Built and established method of working for a team of 4 offshore developers providing implementation support for new clients</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">People Management</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">People Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Relationship management</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Relationship Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Worked closely with account management to understand existing clients' issues with the product, and establishing product roadmap to meet these needs</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Product roadmap</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Client contact</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Use Case</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Requirements gathering</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Prioritisation</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="query.length&gt;0" class="hidden-phone" style="display: none; ">
+                        <!-- ngRepeat: otherSkill in experience.otherSkills | filter:query --><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding">Other Keywords</div>
+                            <span class="skill ng-binding">Financial Markets
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Wealth Management
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Exchange Data
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Cross-symbology
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Reuters
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Fundamentals
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Quote
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">News
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">SOAP
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">API</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Web services
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">API</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">MS Access
+                                <span ng-hide="$last" class="skill" style="display: none; ">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Data Analysis</span></span>
+                        </div>
+                    </div>
+                </div></td>
+            </tr><tr ng-repeat="experience in experiences | filter:query" class="ng-scope">
+                <td>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="pull-right hidden-phone">
+                            <div class="toDate ng-binding"><small class="muted ng-binding">To: </small>Sep 2007</div>
+                            <div class="right company ng-binding"><small class="muted ng-binding">Company:</small> Riskclick</div>
+                            <div class="right ng-binding"><small class="muted ng-binding">Location:</small> New York, United States</div>
+                            <div class="right ng-binding"><small class="muted ng-binding">From:</small> Sep 2005</div>
+                        </div>
+                    </div>
+                    <div class="span8 offset1">
+                        <div class="experience-header"><h4 class="ng-binding">Product Manager <small class="ng-binding"> - Underwriting Process Manager</small></h4></div>
+                        <div class="visible-phone"><em class="ng-binding">Riskclick | Sep 2005 - Sep 2007</em></div>
+                        <div title="problem"><span class="problem ng-binding">Commercial insurance processes are highly manual, costly, and prone to errors, while at the same time requiring expert judgement from underwriters.</span></div>
+                        <div title="solution"><span class="solution ng-binding">The product reduces manual re-entry of data, automates key risk screening steps and enables a structured exception handling workflow.</span></div>
+
+                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible &amp;&amp; (!query || query.length==0)" class="btn btn-link ng-binding" style="display: none; "><i class="icon-chevron-up"></i>Hide</button><button ng-show="!experience.highlightsVisible &amp;&amp; (!query || query.length==0)" class="btn btn-link ng-binding"><i class="icon-chevron-down"></i>Show</button>
+                            <div ng-show="experience.highlightsVisible || query.length&gt;0" style="display: none; ">
+                                <!-- ngRepeat: highlight in experience.highlights | filter:query --><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Responsible for functional design, visual interface design of a highly customisable system to manage complex business processes</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Functional Design</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Product Creation</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">BRD</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Use Case</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">MRD</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Product Creation</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">User Interface Design</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Technical</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">UI Design</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Defined functional specifications for and set priorities for 12 person offshore development team</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Offshore Development</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Relationship Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Product Creation</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">People Management</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">People Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Prioritisation</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Product Creation</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope
+ ng-binding">Project Management</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Conducted extensive requirements gathering sessions with beta clients</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Requirements gathering</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Product Creation</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Client contact</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Relationship Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="query.length&gt;0" class="hidden-phone" style="display: none; ">
+                        <!-- ngRepeat: otherSkill in experience.otherSkills | filter:query --><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding">Other Keywords</div>
+                            <span class="skill ng-binding">Commercial insurance
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Rules engines
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Business Process Re-engineering
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">ACORD data standards
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">XML
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Oracle
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Workflow
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Microsoft .Net
+                                <span ng-hide="$last" class="skill" style="display: none; ">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Technical</span></span>
+                        </div>
+                    </div>
+                </div></td>
+            </tr><tr ng-repeat="experience in experiences | filter:query" class="ng-scope">
+                <td>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="pull-right hidden-phone">
+                            <div class="toDate ng-binding"><small class="muted ng-binding">To: </small>Aug 2005</div>
+                            <div class="right company ng-binding"><small class="muted ng-binding">Company:</small> Riskclick</div>
+                            <div class="right ng-binding"><small class="muted ng-binding">Location:</small> London, England</div>
+                            <div class="right ng-binding"><small class="muted ng-binding">From:</small> Feb 2000</div>
+                        </div>
+                    </div>
+                    <div class="span8 offset1">
+                        <div class="experience-header"><h4 class="ng-binding">Design Lead <small class="ng-binding"> - VNAB Claims Module</small></h4></div>
+                        <div class="visible-phone"><em class="ng-binding">Riskclick | Feb 2000 - Aug 2005</em></div>
+                        <div title="problem"><span class="problem ng-binding">The product enables end-to-end online processing of claims for complex risks, replacing a costly paper-based process.</span></div>
+                        <div title="solution"><span class="solution ng-binding">60,000 claims are processed using the system each year, saving the client over Euro 800K per year.</span></div>
+
+                        <div ng-click="toggleHighlights(experience.experienceId)"><button ng-show="experience.highlightsVisible &amp;&amp; (!query || query.length==0)" class="btn btn-link ng-binding"
+style="display: none; "><i class="icon-chevron-up"></i>Hide</button><button ng-show="!experience.highlightsVisible &amp;&amp; (!query || query.length==0)" class="btn btn-link ng-binding"><i class="icon-chevron-down"></i>Show</button>
+                            <div ng-show="experience.highlightsVisible || query.length&gt;0" style="display: none; ">
+                                <!-- ngRepeat: highlight in experience.highlights | filter:query --><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Responsible for working with client to determine the specifications through workshops with user-groups. Cross-functional flow diagrams and UML class diagrams were used extensively</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Functional Design</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">User workshop</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Relationship Management</span><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">UML</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">Flow diagrams</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+                                                <span class="ng-binding">User Acceptance Testing</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query --><span ng-repeat="aspect in skill.aspects | filter:query" class="hide ng-scope ng-binding">Business</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="highlight ng-scope" ng-repeat="highlight in experience.highlights | filter:query">
+                                    <div class="row-fluid">
+                                        <div class="span8 highlight">
+                                            <ul>
+                                                <li><div class="highlight"><span class="highlight ng-binding">Worked with internal groups to ensure that the project would provide the necessary functionality and would meet KPQPs</span></div></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="span4 highlight hidden-phone">
+                                            <!-- ngRepeat: skill in highlight.skills | filter:query --><div title="skills" class="skill  ng-scope" ng-repeat="skill in highlight.skills | filter:query">
+
+                                                <span class="ng-binding">Requirements specification</span>
+
+                                                <!-- ngRepeat: aspect in skill.aspects | filter:query -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="query.length&gt;0" class="hidden-phone" style="display: none; ">
+                        <!-- ngRepeat: otherSkill in experience.otherSkills | filter:query --><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding">Other Keywords</div>
+                            <span class="skill ng-binding">Insurance
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Claims Management
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Document Management
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">Business Process Re-engineering
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Business</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">MS Access
+                                <span ng-hide="$last" class="skill">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query"
+ style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Data Analysis</span></span><span ng-repeat="otherSkill in experience.otherSkills | filter:query" class="ng-scope">
+                            <div ng-show="$first" class="ng-binding" style="display: none; ">Other Keywords</div>
+                            <span class="skill ng-binding">MS SQL Server
+                                <span ng-hide="$last" class="skill" style="display: none; ">,</span>
+                            </span>
+                            <!-- ngRepeat: aspect in otherSkill.aspects | filter:query --><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query"
+ style="display: none; ">Technical</span><span class="skill ng-scope ng-binding" ng-hide="true" ng-repeat="aspect in otherSkill.aspects | filter:query" style="display: none; ">Data Analysis</span></span>
+                        </div>
+                    </div>
+                </div></td>
+            </tr>
+        </tbody>
+    </table>
+</div></div>
+        </div>
+    </div>
+</div>
+</div>
+    <!-- uncomment for dev
+    <script src="lib/json2/json2.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+    -->
+    <script src="js/app.min.js"></script>
+    <script src="js/services.min.js"></script>
+    <script src="js/controllers.min.js"></script>
+    <script src="js/filters.min.js"></script>
+    <script src="js/directives.min.js"></script>
+
+
+</body></html>

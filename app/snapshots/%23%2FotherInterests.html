@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en" xmlns:ng="http://angularjs.org" ng-app="myApp" id="ng-app" class="ng-scope"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="Bilingual Paris-based product owner with 10 years experience">
+    <meta name="description" content="Chef de Produit bilingue et exp+®riment+®">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Barrett">
+    <title>Chris Barrett CV</title>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="lib/lib.min.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style>
+    <!-- <script src="lib/angular/angular.js"></script> -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/darkstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <!--[if lte IE 8]>
+    <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+
+        // Optionally these for CSS
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38680201-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body class="mine">
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10 ng-scope" ng-controller="HeaderCtrl">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span6">
+                    <h1 ng-bind="FullName" class="ng-binding">Chris Barrett</h1>
+                    <h6 ng-bind="Summary" class="ng-binding">Bilingual Head of Product Management based in Paris, France</h6><h6 ng-hide="true" style="display: none; ">Loading...</h6>
+                    <div class="visible-phone">
+                        <div>
+                            <small><span ng-bind="email + ': '" class="ng-binding">Email: </span><a href="http://www.google.com/recaptcha/mailhide/d?k=01LdVjdCDnnQl5iIU-dnrfog==&amp;c=EWXnTwUeKwdK15-guKvu2YWL6LlnEOHYR2hMFiC_l5U=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501LdVjdCDnnQl5iIU-dnrfog\75\75\46c\75EWXnTwUeKwdK15-guKvu2YWL6LlnEOHYR2hMFiC_l5U\075', '', 'toolbar=
+0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...@chrisbarrett.fr</a></small>
+                        </div>
+                        <div><small><a href="http://www.linkedin.com/profile/view?id=14811446&amp;trk=tab_pro" ng-bind="linkedIn" class="ng-binding">LinkedIn Profile</a></small></div>
+                        <div><small>
+                            <select class="input-small ng-pristine ng-valid" ng-model="locale" ng-options="locale.value as locale.name for locale in locales" ng_change="changeLocale(locale)"><option value="0" selected="selected">English</option><option value="1">Fran+ºais</option></select></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4 offset2 hidden-phone">
+                    <div class="row-fluid">
+                        <div class="pull-right">
+                            <span ng-bind="email + ': '" class="ng-binding">Email: </span><a href="http://www.google.com/recaptcha/mailhide/d?k=01DAvhPDlNQIRklgvSGdL5oA==&amp;c=cRNL1UYNTzZx5wPAH2YMC6Q
+DU39j-FY6yR_QhtwMw_8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501DAvhPDlNQIRklgvSGdL5oA\75\75\46c\75cRNL1UYNTzZx5wPAH2YMC6QDU39j-FY6yR_QhtwMw_8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...@chrisbarrett.fr</a>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="pull-right"><a href="http://www.linkedin.com/profile/view?id=14811446&amp;trk=tab_pro" ng-bind="linkedIn" class="ng-binding">LinkedIn Profile</a></div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="pull-right">
+                            <select class="input-medium ng-pristine ng-valid" ng-model="locale" ng-options="locale.value as locale.name for locale in locales" ng_change="changeLocale(locale)"><option value="0" selected="selected">English</option><option value="1">Fran+ºais</option></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <ul class="nav nav-tabs">
+                    <li ng-class="{active:location=='/coreCompetencies'}"><a ng-click="goTo('/coreCompetencies')" ng-bind="CoreCompetencies" href="" class="ng-binding">Core Competencies</a></li>
+                    <li ng-class="{active:location=='/experience'}"><a ng-click="goTo('/experience')" ng-bind="Experience" href="" class="ng-binding">Experience</a></li>
+                    <li ng-class="{active:location=='/education'}"><a ng-click="goTo('/education')" ng-bind="Education" href="" class="ng-binding">Education and Languages</a></li>
+                    <li ng-class="{active:location=='/otherInterests'}" class="active"><a ng-click="goTo('/otherInterests')" ng-bind="OtherInterests" href="" class="ng-binding">Other Interests</a></li
+>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+        <div class="span12" ng-view=""><div class="well well-small ng-scope">
+    <div class="row-fluid">
+        <div class="span9">
+            <h3><span class="ng-binding">Other</span></h3>
+        </div>
+    </div>
+</div>
+        <div class="row-fluid ng-scope">
+            <div class="span12 ng-binding">
+            I have an interest in data visualisation which I pursue in my spare time by writing web applications like the following:
+            </div>
+        </div>
+<ul class="thumbnails ng-scope">
+    <li class="span4 offset1">
+        <div class="thumbnail">
+            <img src="img/NewsMap.png">
+            <h4>NewsMap</h4>
+            <p class="ng-binding"> Treemap visualisation of the latest stories published by the UK newspaper, <a href="http://www.guardian.co.uk">The Guardian</a></p>
+            <p class="ng-binding">Working example available  <a href="http://newsmap.chrisbarrett.fr" class="ng-binding">here</a></p>
+            <p class="ng-binding"> Source code available on <a href="https://github.com/chri5b/guardian-newsmap">GitHub</a></p>
+            <table class="table table-condensed">
+                <tbody>
+                    <tr>
+                        <td>D3.js</td>
+                        <td>jQuery</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </li>
+    <li class="span4 offset1">
+        <div class="thumbnail">
+            <img src="img/WordTree.png">
+            <h4>WordTree</h4>
+            <p class="ng-binding">Open Source <a href="http://d3js.org">D3.js</a> plugin which visualises text using a Word Tree. Used in <a href="http://www.doctrinal.fr">Doctrinal</a>  as a search term visualisation tool.</p>
+            <p class="ng-binding"> Source code available on  <a href="https://github.com/chri5b/wordTree">GitHub</a></p>
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <td>D3.js</td>
+                    <td>Node.js</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </li>
+</ul>
+</div>
+        </div>
+    </div>
+</div>
+</div>
+    <!-- uncomment for dev
+    <script src="lib/json2/json2.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+    -->
+    <script src="js/app.min.js"></script>
+    <script src="js/services.min.js"></script>
+    <script src="js/controllers.min.js"></script>
+    <script src="js/filters.min.js"></script>
+    <script src="js/directives.min.js"></script>
+
+
+</body></html>
