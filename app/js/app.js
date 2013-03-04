@@ -9,7 +9,10 @@ var app = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.dir
     $routeProvider.when('/education', {templateUrl: 'partials/education.html', controller: EducationCtrl});
     $routeProvider.when('/otherInterests', {templateUrl: 'partials/otherInterests.html', controller: OtherCtrl});
     $routeProvider.otherwise({redirectTo: '/coreCompetencies'});
-}]);
+}]).
+    config(['$locationProvider', function($location) {
+	$location.hashPrefix('!');
+    }]);
 
 app.run(function($rootScope,$locale) {
     if(navigator.language)
