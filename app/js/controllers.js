@@ -7,6 +7,11 @@ function HeaderCtrl($scope,localisation,myLocaleBroadcaster,$location,myLocation
 
     $scope.location = $location.path();
 
+    if(($location.absUrl().indexOf("lang=fr")) != -1) {
+        $location.search("lang","fr");
+        $scope.locale = "fr";
+    }
+
     $scope.goTo = function(path) {
         $scope.location = path;
         $location.path(path);
@@ -26,6 +31,7 @@ function HeaderCtrl($scope,localisation,myLocaleBroadcaster,$location,myLocation
 
     $scope.changeLocale = function(locale) {
         myLocaleBroadcaster.prepForBroadcast(locale);
+        $location.search("lang",locale);
     };
 
     $scope.$on('localeChanged', function() {
@@ -332,7 +338,8 @@ function ExperienceCtrl($scope,localisation,myLocaleBroadcaster,$location) {
                         {description:localisation.localise($scope.locale,"sk_booksAndRecords"),aspects:[localisation.localise($scope.locale,"aspect_api")]},
                         {description:localisation.localise($scope.locale,"sk_dataMashups"),aspects:[localisation.localise($scope.locale,"aspect_technical"),localisation.localise($scope.locale,"aspect_api")]},
                         {description:localisation.localise($scope.locale,"sk_access"),aspects:[localisation.localise($scope.locale,"aspect_technical"),localisation.localise($scope.locale,"aspect_dataAnalysis")]},
-                        {description:localisation.localise($scope.locale,"sk_sqlServer"),aspects:[localisation.localise($scope.locale,"aspect_technical"),localisation.localise($scope.locale,"aspect_dataAnalysis")]}
+                        {description:localisation.localise($scope.locale,"sk_sqlServer"),aspects:[localisation.localise($scope.locale,"aspect_technical"),localisation.localise($scope.locale,"aspect_dataAnalysis")]},
+                        {description:localisation.localise($scope.locale,"sk_mvp"),aspects:[localisation.localise($scope.locale,"aspect_business")]}
                     ]
             },
             {
