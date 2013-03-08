@@ -1,0 +1,626 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="Bilingual Paris-based product owner with 10 years experience">
+    <meta name="description" content="Chef de Produit bilingue et expérimenté">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Barrett">
+    <title>Chris Barrett CV - Expérience</title>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="lib/lib.min.js"></script>
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/darkstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.css">
+    <script src="../lib/jQuery/jquery.js"></script>
+    <script src="../js/static.js"></script>
+    <script src="../lib/bootstrap/bootstrap-transition.js"></script>
+    <script src="../lib/bootstrap/bootstrap-collapse.js"></script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38680201-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body class="mine">
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span6">
+                    <h1 ng-bind="FullName">Chris Barrett</h1>
+                    <h6 ng-bind="Summary">Chef de Produit expérimenté, basé à Paris, anglais courant</h6>
+                    <div class="visible-phone">
+                        <div>
+                            <small><span>Email: </span><a href="http://www.google.com/recaptcha/mailhide/d?k=01LdVjdCDnnQl5iIU-dnrfog==&amp;c=EWXnTwUeKwdK15-guKvu2YWL6LlnEOHYR2hMFiC_l5U=" onclick="_gaq.push(['_trackEvent','click','email','']);window.open('http://www.google.com/recaptcha/mailhide/d?k\07501LdVjdCDnnQl5iIU-dnrfog\75\75\46c\75EWXnTwUeKwdK15-guKvu2YWL6LlnEOHYR2hMFiC_l5U\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...@chrisbarrett.fr</a></small>
+                        </div>
+                        <div><small><a onclick="_gaq.push(['_trackEvent','click','linkedIn',''])" href="http://www.linkedin.com/profile/view?id=14811446&amp;trk=tab_pro">Profil LinkedIn</a></small></div>
+                        <div><small>
+                            <select class="input-small localeSelector"><option value="en">English</option><option value="fr"  selected="selected">Français</option></select></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4 offset2 hidden-phone">
+                    <div class="row-fluid">
+                        <div class="pull-right">
+                            <span>Email: </span><a href="http://www.google.com/recaptcha/mailhide/d?k=01DAvhPDlNQIRklgvSGdL5oA==&amp;c=cRNL1UYNTzZx5wPAH2YMC6QDU39j-FY6yR_QhtwMw_8=" onclick="_gaq.push(['_trackEvent','click','email','']);window.open('http://www.google.com/recaptcha/mailhide/d?k\07501DAvhPDlNQIRklgvSGdL5oA\75\75\46c\75cRNL1UYNTzZx5wPAH2YMC6QDU39j-FY6yR_QhtwMw_8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...@chrisbarrett.fr</a>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="pull-right"><a onclick="_gaq.push(['_trackEvent','click','linkedIn',''])" href="http://www.linkedin.com/profile/view?id=14811446&amp;trk=tab_pro">Profil LinkedIn</a></div>
+                    </div>
+                    <div class="row-fluid">
+                        <!-- TODO: handle change of language -->
+                        <div class="pull-right">
+                            <select class="input-medium localeSelector"><option value="en">English</option><option value="fr" selected="selected">Français</option></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <ul class="nav nav-tabs">
+                    <li><a href="coreCompetencies.html">Compétences Clefs</a></li>
+                    <li class="active"><a href="">Expérience</a></li>
+                    <li><a href="education.html">Education et Langues</a></li>
+                    <li><a href="otherInterests.html">Autres Intérêts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+        <div class="span12" ng-view=""><div class="well well-small">
+    <div class="row-fluid">
+        <div class="span8">
+            <h3>
+                <span>Expérience</span> <!--show localised text for Experience -->
+				<span id="#queryTerm"></span> <!-- Show query term in front of exp+�rience (for English) -->
+                <span id="#professional">Professionnelle</span> <!--show professional in front of experience if there is no query (for English) -->
+                
+                &nbsp;  <button class="btn btn-small btn-info" id="removeFilter" style="display: none; ">Enlever Filtre</button> <!-- button -->
+            </h3>
+        </div>
+
+        <div class="span4 visible-desktop">
+            <form class="form-search pull-right">
+                <h3>
+                    <input type="text" class="input search-query" placeholder="Recherche"></h3>
+            </form>
+        </div>
+        <div class="span4 visible-tablet">
+            <form class="form-search pull-right">
+                <h3>
+                <input type="text" class="input-medium search-query" placeholder="Recherche"></h3>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <table class="table table-striped">
+        <tbody>
+            <tr class="experience">
+    <td>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="pull-right hidden-phone">
+                    <div class="toDate"><small class="muted">A: </small>Aujourd'hui</div>
+                    <div class="right company"><small class="muted">Entreprise:</small> Thomson Reuters</div>
+                    <div class="right"><small class="muted">Endroit:</small> Paris, France</div>
+                    <div class="right"><small class="muted">De:</small> nov 2012</div>
+                </div>
+            </div>
+            <div class="span8 offset1">
+                <div class="experience-header">
+                    <h4>Agile Product Owner <small> - Wealth Management App Store</small></h4>
+                </div>
+                <div class="visible-phone">
+                    <em>Thomson Reuters | nov 2012 - Aujourd'hui</em>
+                </div>
+                <div title="problem">
+                    <span class="problem">Nos clients bancaires peinent à créer des outils d’investissement pour leurs investisseurs particuliers sur leurs sites web.</span>
+                </div>
+                <div title="solution">
+                    <span class="solution">Le «App Store» permet aux éditeurs de logiciels externes de créer des Widgets HTML5 qui peuvent être facilement intégrés dans les sites web et mobile de nos clients.</span>
+                </div>
+
+                        <div><button type="button" class="btn btn-link collapseButton" data-toggle="collapse" data-target="#experience1"><i class="icon-chevron-up"></i><span class="collapserText">Moins</span></button>
+                            <div class="collapse in" id="experience1">
+                <div>
+                        <div class="highlight">
+                            <div class="row-fluid">
+                                <div class="span8 highlight">
+                                    <ul>
+                                        <li>
+                                            <div class="highlight">
+                                                <span class="highlight">Gestion d’une équipe de 3 chef de produits junior afin d’établir et gérer le roadmap produit pour les 20 développeurs offshore</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="span4 highlight hidden-phone">
+                                    <div title="skills" class="skill">
+                                        <span>Agile</span>
+                                    </div>
+                                    <div title="skills" class="skill">
+                                        <span>SCRUM</span>
+                                    </div>
+                                    <div title="skills" class="skill">
+                                        <span>Product Owner</span>
+                                        <span class="hide">Création de Produit</span>
+                                    </div>
+                                    <div title="skills" class="skill">
+                                        <span>Gestion des personnes</span>
+                                        <span class="hide">Gestion d'Equipe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                </div><div class="highlight">
+                                    <div class="row-fluid filterable">
+                                <div class="span8 highlight">
+                                    <ul>
+                                        <li><div class="highlight"><span class="highlight">Négociation des ressources, de l’étendue des fonctions et du calendrier avec les acteurs concernés</span></div></li>
+                                    </ul>
+                                </div>
+                                <div class="span4 highlight hidden-phone">
+                                    <div title="skills" class="skill">
+                                        <span>Gestion de projet</span>
+
+                                        <span class="hide">Gestion de Projet</span><span class="hide">Coté Métier</span>
+                                    </div>
+                                    <div title="skills" class="skill">
+                                        <span>Gestion des acteurs concernés</span>
+
+                                        <span class="hide">Gestion de Projet</span><span class="hide">Coté Métier</span>
+                                    </div>
+                                    <div title="skills" class="skill">
+                                        <span>Gestion de calendrier</span>
+
+                                        <span class="hide">Gestion de Projet</span><span class="hide">Coté Métier</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                </div><div class="highlight">
+                                    <div class="row-fluid filterable">
+                                <div class="span8 highlight">
+                                    <ul>
+                                        <li><div class="highlight"><span class="highlight">Développement d’un modèle financier détaillé afin de justifier l’investissement dans le projet</span></div></li>
+                                    </ul>
+
+                                </div>
+                                <div class="span4 highlight hidden-phone">
+                                    <div title="skills" class="skill">
+                                        <span>Analyse de rentabilité</span>
+
+                                        <span class="hide">Coté Métier</span><span class="hide">Analyse de Données</span>
+                                    </div><div title="skills" class="skill">
+                                    <span>Excel</span>
+
+                                    <span class="hide">Coté Métier</span><span class="hide">Analyse de Données</span>
+                                </div><div title="skills" class="skill">
+                                    <span>Modélisation financière</span>
+
+                                    <span class="hide">Coté Métier</span><span class="hide">Analyse de Données</span>
+                                </div>
+                                </div>
+                            </div>
+                        </div><div class="highlight">
+                        <div class="row-fluid">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Création d’un programme de partenariat pour engager les développeurs externes</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Programme de partenariat</span>
+
+                                    <span class="hide">Gestion de Partenariat</span><span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                <span>Documentation</span>
+
+
+                            </div><div title="skills" class="skill">
+                                <span>Gestion de partnariat</span>
+
+                                <span class="hide">Gestion de Partenariat</span><span class="hide">Coté Métier</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div><div class="highlight">
+                                    <div class="row-fluid filterable">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Communication avec des clients comme E*TRADE, BNP Paribas et BBVA pour mieux comprendre les besoins du marché</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Communication orale</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                <span>Contact client</span>
+
+                                <span class="hide">Gestion de Partenariat</span><span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span>Analyse des besoins</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div><div class="highlight">
+                                    <div class="row-fluid filterable">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Poursuite de discussions transversales portant sur notre stratégie de tarification</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Stratégie de tarification</span>
+
+                                    <span class="hide">Analyse de Données</span><span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                <span>Collaboration transversale</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+                </div></td>
+            </tr><tr class="experience">
+    <td>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="pull-right hidden-phone">
+                    <div class="toDate"><small class="muted">A: </small>Oct 2010</div>
+                    <div class="right company"><small class="muted">Entreprise:</small> Thomson Reuters</div>
+                    <div class="right"><small class="muted">Endroit:</small> Londres, Royaume-Uni</div>
+                    <div class="right"><small class="muted">De:</small> Sep 2007</div>
+                </div>
+            </div>
+            <div class="span8 offset1">
+                <div class="experience-header"><h4>Chef de Produit <small> - Thomson Reuters Knowledge Direct API</small></h4></div>
+                <div class="visible-phone"><em>Thomson Reuters | Sep 2007 - Oct 2010</em></div>
+                <div title="problem"><span class="problem">600 banques dont le Crédit Agricole, Boursorama, BNP Paribas, Barclays et Charles Schwab qui publient des données financières pour les investisseurs particuliers utilisent cet API.</span></div>
+                <div title="solution"><span class="solution">Le revenu annuel est de $120M et le produit répond à 500M requêtes par mois.</span></div>
+
+                        <div><button type="button" class="btn btn-link collapseButton" data-toggle="collapse" data-target="#experience2"><i class="icon-chevron-down"></i><span class="collapserText">Plus</span></button>
+                            <div class="collapse" id="experience2">
+                        <div class="highlight">
+                                    <div class="row-fluid filterable">
+                                <div class="span8 highlight">
+                                    <ul>
+                                        <li><div class="highlight"><span class="highlight">Analyse de profitabilité des clients dans le but de recommander un changement de politique commerciale</span></div></li>
+                                    </ul>
+
+                                </div>
+                                <div class="span4 highlight hidden-phone">
+                                    <div title="skills" class="skill">
+                                        <span>Analyse de rentabilité</span>
+
+                                        <span class="hide">Coté Métier</span><span class="hide">Analyse de Données</span>
+                                    </div><div title="skills" class="skill">
+                                    <span>Stratégie de tarification</span>
+
+                                    <span class="hide">Coté Métier</span><span class="hide">Analyse de Données</span>
+                                </div>
+                                </div>
+                            </div>
+                        </div><div class="highlight">
+                        <div class="row-fluid">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Définition de la politique de tarification, et des processus de support pour des améliorations du produit</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Processus 'Order To Cash'</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                <span>Release Notes</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span>Marketing</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span>Stratégie commerciale</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div><div class="highlight">
+                                    <div class="row-fluid filterable">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Géstion des activités de lancement de produit, création de supports marketing, formation des équipes de vente et de support technique</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Lancement de produit</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                <span>Collaboration transversale</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span>Soutien aux équipes de vente</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span>Support</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div><div class="highlight">
+                                    <div class="row-fluid filterable">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Création d’une équipe de 4 développeurs basés en Biélorussie pour aider les clients à la mise en œuvre du produit</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Gestion des personnes</span>
+
+                                    <span class="hide">Gestion d'Equipe</span><span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                <span>Gestion de partnariat</span>
+
+                                <span class="hide">Gestion de Partenariat</span><span class="hide">Coté Métier</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div><div class="highlight">
+                        <div class="row-fluid">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Etroite collaboration avec les account managers afin de comprendre les frustrations des clients actuels</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Feuille de route produit</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                <span>Contact client</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span>Cas d'utilisation</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span>Analyse des besoins</span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span> </span>
+
+                                <span class="hide">Coté Métier</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div></td>
+            </tr><tr class="experience">
+    <td>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="pull-right hidden-phone">
+                    <div class="toDate"><small class="muted">A: </small>Sep 2007</div>
+                    <div class="right company"><small class="muted">Entreprise:</small> Riskclick</div>
+                    <div class="right"><small class="muted">Endroit:</small> New York, Etats-Unis</div>
+                    <div class="right"><small class="muted">De:</small> Sep 2005</div>
+                </div>
+            </div>
+            <div class="span8 offset1">
+                <div class="experience-header"><h4>Chef de Produit <small> - Underwriting Process Manager</small></h4></div>
+                <div class="visible-phone"><em>Riskclick | Sep 2005 - Sep 2007</em></div>
+                <div title="problem"><span class="problem"> </span></div>
+                <div title="solution"><span class="solution">Le produit réduit les coûts et les erreurs dans les processus d’assurance commerciale en réduisant les recopiages de données et en rendant automatiques certaines des étapes d’évaluation des risques.</span></div>
+
+                        <div><button type="button" class="btn btn-link collapseButton" data-toggle="collapse" data-target="#experience4"><i class="icon-chevron-down"></i><span class="collapserText">Plus</span></button>
+                            <div class="collapse" id="experience4">
+                        <div class="highlight">
+                                    <div class="row-fluid filterable">
+                                <div class="span8 highlight">
+                                    <ul>
+                                        <li><div class="highlight"><span class="highlight">Création des spécifications fonctionnelles et conception de l’interface utilisateur pour un système de Business Process Management</span></div></li>
+                                    </ul>
+
+                                </div>
+                                <div class="span4 highlight hidden-phone">
+                                    <div title="skills" class="skill">
+                                        <span>Conception Fonctionnelle</span>
+
+                                        <span class="hide">Coté Métier</span><span class="hide">Création de Produit</span>
+                                    </div><div title="skills" class="skill">
+                                    <span>Enoncé des exigences fonctionelles</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                    <span>Cas d'utilisation</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                    <span>Enoncé des exigences du marché</span>
+
+                                    <span class="hide">Coté Métier</span><span class="hide">Création de Produit</span>
+                                </div><div title="skills" class="skill">
+                                    <span>Conception des interfaces utilisateur</span>
+
+                                    <span class="hide">Coté Technique</span><span class="hide">Conception d'Interface Utilisateur</span>
+                                </div>
+                                </div>
+                            </div>
+                        </div><div class="highlight">
+                                    <div class="row-fluid filterable">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Création des spécifications fonctionnelles et définition de priorités pour une équipe de développement de 12 personnes.</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Développement Offshore</span>
+
+                                    <span class="hide">Gestion de Partenariat</span><span class="hide">Coté Métier</span><span class="hide">Création de Produit</span>
+                                </div><div title="skills" class="skill">
+                                <span>Gestion des personnes</span>
+
+                                <span class="hide">Gestion d'Equipe</span><span class="hide">Coté Métier</span>
+                            </div><div title="skills" class="skill">
+                                <span> </span>
+
+                                <span class="hide">Coté Métier</span><span class="hide">Création de Produit</span><span class="hide">Gestion de Projet</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div><div class="highlight">
+                                    <div class="row-fluid filterable">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Conduite de réunions avec les clients afin de définir leurs besoins</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Analyse des besoins</span>
+
+                                    <span class="hide">Coté Métier</span><span class="hide">Création de Produit</span>
+                                </div><div title="skills" class="skill">
+                                <span>Contact client</span>
+
+                                <span class="hide">Gestion de Partenariat</span><span class="hide">Coté Métier</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div></td>
+            </tr><tr class="experience">
+    <td>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="pull-right hidden-phone">
+                    <div class="toDate"><small class="muted">A: </small>Aug 2005</div>
+                    <div class="right company"><small class="muted">Entreprise:</small> Riskclick</div>
+                    <div class="right"><small class="muted">Endroit:</small> Londres, Royaume-Uni</div>
+                    <div class="right"><small class="muted">De:</small> Fev 2000</div>
+                </div>
+            </div>
+            <div class="span8 offset1">
+                <div class="experience-header"><h4>Analyste des Spécifications Fonctionnelles <small> - VNAB Claims Module</small></h4></div>
+                <div class="visible-phone"><em>Riskclick | Fev 2000 - Aug 2005</em></div>
+                <div title="problem"><span class="problem">La gestion de sinistres au sein de la bourse d’assurance hollandaise implique plusieurs entreprises et s’appuie essentiellement sur des documents physiques.</span></div>
+                <div title="solution"><span class="solution">Le projet permet un traitement numérique des sinistres du début à la fin. 60 000 sinistres par an sont traités par le système et le projet a économisé plus de 800 000 Euro par an.</span></div>
+
+                        <div><button type="button" id="collapseButton1" class="btn btn-link" data-toggle="collapse" data-target="#experience3"><i class="icon-chevron-down"></i><span class="collapserText">Plus</span></button>
+                            <div class="collapse" id="experience3">
+                        <div class="highlight">
+                            <div class="row-fluid">
+                                <div class="span8 highlight">
+                                    <ul>
+                                        <li><div class="highlight"><span class="highlight">Création des spécifications fonctionnelles, des modèles domaine UML et des organigrammes du processus</span></div></li>
+                                    </ul>
+
+                                </div>
+                                <div class="span4 highlight hidden-phone">
+                                    <div title="skills" class="skill">
+                                        <span>Conception Fonctionnelle</span>
+
+                                        <span class="hide">Coté Métier</span>
+                                    </div><div title="skills" class="skill">
+                                    <span>Atelier pratique</span>
+
+                                    <span class="hide">Gestion de Partenariat</span><span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                    <span>UML</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                    <span>Organigrammes du processus</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div><div title="skills" class="skill">
+                                    <span>Tests d'acceptation utilisateur</span>
+
+                                    <span class="hide">Coté Métier</span>
+                                </div>
+                                </div>
+                            </div>
+                        </div><div class="highlight">
+                        <div class="row-fluid">
+                            <div class="span8 highlight">
+                                <ul>
+                                    <li><div class="highlight"><span class="highlight">Travail étroit avec les groupes internes de développement pour assurer que les besoins fonctionnels et de performance seraient atteints</span></div></li>
+                                </ul>
+
+                            </div>
+                            <div class="span4 highlight hidden-phone">
+                                <div title="skills" class="skill">
+                                    <span>Rédaction des spécifications fonctionnelles</span>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+</tbody>
+</table>
+</div></div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</body></html>
