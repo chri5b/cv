@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en" xmlns:ng="http://angularjs.org" ng-app="myApp" id="ng-app" class="ng-scope"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="Bilingual Paris-based product owner with 10 years experience">
+    <meta name="description" content="Chef de Produit bilingue et expérimenté">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Barrett">
+    <title>Chris Barrett CV</title>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="lib/lib.min.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style>
+    <!-- <script src="lib/angular/angular.js"></script> -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/darkstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <!--[if lte IE 8]>
+    <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+
+        // Optionally these for CSS
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+
+  	var _gaq = _gaq || [];
+  	_gaq.push(['_setAccount', 'UA-38680201-1']);
+  	_gaq.push(['_trackPageview']);
+
+  	(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  	})();
+
+    </script>
+</head>
+<body class="mine">
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10 ng-scope" ng-controller="HeaderCtrl">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span6">
+                    <h1 ng-bind="FullName" class="ng-binding">Chris Barrett</h1>
+                    <h6 ng-bind="Summary" class="ng-binding">Chef de Produit expérimenté, basé à Paris, anglais courant</h6><h6 ng-hide="true" style="display: none; ">Loading...</h6>
+                    <div class="visible-phone">
+                        <div>
+                            <small><span ng-bind="email + ': '" class="ng-binding">Email: </span><a href="http://www.google.com/recaptcha/mailhide/d?k=01LdVjdCDnnQl5iIU-dnrfog==&amp;c=EWXnTwUeKwdK15-guKvu2YWL6LlnEOHYR2hMFiC_l5U=" onclick="_gaq.push(['_trackEvent','click','email','']);window.open('http://www.google.com/recaptcha/mailhide/d?k\07501LdVjdCDnnQl5iIU-dnrfog\75\75\46c\75EWXnTwUeKwdK15-guKvu2YWL6LlnEOHYR2hMFiC_l5U\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...@chrisbarrett.fr</a></small>
+                        </div>
+                        <div><small><a href="http://www.linkedin.com/profile/view?id=14811446&amp;trk=tab_pro" ng-bind="linkedIn" onclick="_gaq.push(['_trackEvent','click','linkedIn',''])" class="ng-binding">Profil LinkedIn</a></small></div>
+                        <div><small>
+                            <select class="input-small ng-pristine ng-valid" ng-model="locale" ng-options="locale.value as locale.name for locale in locales" ng_change="changeLocale(locale)"><option value="0">English</option><option value="1" selected="selected">Français</option></select></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4 offset2 hidden-phone">
+                    <div class="row-fluid">
+                        <div class="pull-right">
+                            <span ng-bind="email + ': '" class="ng-binding">Email: </span><a href="http://www.google.com/recaptcha/mailhide/d?k=01DAvhPDlNQIRklgvSGdL5oA==&amp;c=cRNL1UYNTzZx5wPAH2YMC6QDU39j-FY6yR_QhtwMw_8=" onclick="_gaq.push(['_trackEvent','click','email','']);window.open('http://www.google.com/recaptcha/mailhide/d?k\07501DAvhPDlNQIRklgvSGdL5oA\75\75\46c\75cRNL1UYNTzZx5wPAH2YMC6QDU39j-FY6yR_QhtwMw_8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...@chrisbarrett.fr</a>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="pull-right"><a href="http://www.linkedin.com/profile/view?id=14811446&amp;trk=tab_pro" ng-bind="linkedIn" onclick="_gaq.push(['_trackEvent','click','linkedIn','']);" class="ng-binding">Profil LinkedIn</a></div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="pull-right">
+                            <select class="input-medium ng-pristine ng-valid" ng-model="locale" ng-options="locale.value as locale.name for locale in locales" ng_change="changeLocale(locale)"><option value="0">English</option><option value="1" selected="selected">Français</option></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <ul class="nav nav-tabs">
+                    <li ng-class="{active:location=='/coreCompetencies'}" class="active"><a ng-click="goTo('/coreCompetencies')" ng-bind="CoreCompetencies" href="" class="ng-binding">Compétences Clefs</a></li>
+                    <li ng-class="{active:location=='/experience'}"><a ng-click="goTo('/experience')" ng-bind="Experience" href="" class="ng-binding">Expérience</a></li>
+                    <li ng-class="{active:location=='/education'}"><a ng-click="goTo('/education')" ng-bind="Education" href="" class="ng-binding">Education et Langues</a></li>
+                    <li ng-class="{active:location=='/otherInterests'}"><a ng-click="goTo('/otherInterests')" ng-bind="OtherInterests" href="" class="ng-binding">Autres Intérêts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+        <div class="span12" ng-view=""><div class="well well-small ng-scope">
+    <div class="row-fluid">
+        <div class="span9">
+            <h3><span class="ng-binding">Compétences Clefs</span></h3>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid ng-scope">
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <p class="emphasis ng-binding">Je suis un chef de produit expérimenté avec de l'expérience en:</p>
+                    </div>
+                    <div class="row-fluid">
+                        <ul>
+                            <li>
+                                <p class="emphasis"><a ng-click="goTo('/experience',peopleManagement,dePeopleManagement)" href="" class="ng-binding">Gestion d'Equipe</a></p>
+                            </li>
+                            <li><p class="emphasis ng-binding"><a ng-click="goTo('/experience',productCreation,deProductCreation)" href="" class="ng-binding">Création de produits informatiques</a> de A à Z qui atteignent le but voulu </p></li>
+                            <li><p class="emphasis ng-binding"><a ng-click="goTo('/experience',relationshipManagement,deRelationshipManagement)" href="" class="ng-binding">Gestion de relations</a> avec des partenaires externes</p></li>
+                        </ul>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+            </div></td>
+        </tr>
+        <tr>
+            <td>
+                <table class="table">
+                    <tbody>
+                        <tr>
+
+                                <td class="span3 noBorder">
+                                    <div>
+                                        <ul class="nav nav-tabs nav-stacked" id="myTab">
+                                            <li ng-class="{active:subPage=='partials/strengths.html'}" class="active"><a ng-click="subPage='partials/strengths.html'" href="" class="ng-binding">Forces</a></li>
+                                            <li ng-class="{active:subPage=='partials/businessExperience.html'}"><a ng-click="subPage='partials/businessExperience.html'" href="" class="ng-binding">Domaines métiers</a></li>
+                                            <li ng-class="{active:subPage=='partials/productFocus.html'}"><a ng-click="subPage='partials/productFocus.html'" href="" class="ng-binding">Domaines produits</a></li>
+                                            <li ng-class="{active:subPage=='partials/sdlc.html'}"><a ng-click="subPage='partials/sdlc.html'" href="" class="ng-binding">Cycle de vie du développement</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            <td class="span1 noBorder"></td>
+                            <td class="span8 noBorder">
+                                <div>
+                                    <ng-include src="subPage"><ul class="ng-scope">
+    <li>
+        <div class="ng-binding">Je prends en charge des problèmes mal définis, et je dessine et gère la creation de produits qui les rėsolvent. </div>
+    </li>
+    <li>
+        <div class="ng-binding">Je sais créer des modèles qui répondent aux questions telles que  'ce projet sera-t-il  <a ng-click="goTo('/experience',roi,deRoi)" href="" class="ng-binding">profitable?'</a> ou encore 'quelles  <a ng-click="goTo('/experience',agile,deAgile)" href="" class="ng-binding">Témoignages d'utilisateur </a>résoudraient cette problématique métier?' </div>
+    </li>
+    <li>
+        <div class="ng-binding">J'ai un talent particulier pour traduire entre les équipes   <a ng-click="goTo('/experience',technical,deTechnical)" href="" class="ng-binding">Technique </a>et  <a ng-click="goTo('/experience',business,deBusiness)" href="" class="ng-binding">Métier</a> afin de trouver le bon équuilibre entre ce qui est voulu et ce qui est possible</div>
+    </li>
+</ul>
+
+</ng-include>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+        </tbody>
+
+
+    </table>
+</div>
+
+</div>
+        </div>
+    </div>
+</div>
+</div>
+    <!--
+    <script src="lib/json2/json2.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/services.min.js"></script>
+    <script src="js/controllers.min.js"></script>
+    <script src="js/filters.min.js"></script>
+    <script src="js/directives.min.js"></script>
+   --> 
+
+</body></html>
