@@ -40,13 +40,28 @@ $(document).ready(function() {
             //console.log($(this).val());
             doSearch($(this).val())
         }
-    })
+    });
 
     $('#removeFilter').on('click',function() {
        doSearch('');
     });
+
+    $('.tabSelector').on('click', function(e) {
+        e.preventDefault();
+        //Remove active class from the li which currently has it
+        $('.tabSelector').removeClass('active');
+        //Add active class to the current li
+        //Hide all the eligible divs
+        $('#strengths,#sdlc,#productFocus,#businessExperience').hide();
+        //Show the selected one
+        var selector = "#" + $(this).attr('data-target');
+        $(selector).show();
+    });
 })
 
+function switchTo(divSelector) {
+
+}
 
 
 function doSearch(searchString) {
