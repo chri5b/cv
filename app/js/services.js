@@ -63,7 +63,7 @@ var myAppServices = angular.module('myApp.services', []).
             comp_technical:"Technique",
             comp_andthe:"et ",
             comp_business:"Métier",
-            comp_teamsand:" afin de trouver le bon équuilibre entre ce qui est voulu et ce qui est possible",
+            comp_teamsand:" afin de trouver le bon éilibre entre ce qui est voulu et ce qui est possible",
             comp_asyouwould:"Comme vous pouvez imaginer, je connais particulièrement bien",
             comp_functionalDesign:"Conception Fonctionnelle",
             comp_and:"et",
