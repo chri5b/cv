@@ -7,6 +7,71 @@
 // In this case it is a simple value service.
 var myAppServices = angular.module('myApp.services', []).
     value('version', '0.1').
+    value('experiences',
+      [
+        {
+            experienceId:1,
+            fromDate:"Nov 2012",
+            toDate:"Dec 2013",
+            company:"Thomson Reuters",
+            location:
+            {
+                country:"France",
+                city:"Paris"
+            },
+            title:"Product Owner",
+            product:"Wealth Management App Store",
+            problem:"The banks and online brokerages who are our clients struggle to create compelling investment tools for their retail investors.",
+            solution:"The App Store enables third party developers to build HTML5 widgets for use in desktop and mobile browsers to solve this problem",
+            highlightsVisible:false,
+            highlights:
+                [
+                    {
+                        id:"highlight1",
+                        skills: [
+                            {description:"Agile"},
+                            {description:"SCRUM"},
+                            {description:"Product Owner"
+                              ,aspects:["Product Creation"]
+                            },
+                            {description:"People Management"
+                              ,aspects:["People Management"]}
+                        ],
+                        description: "Managed a team of three product managers to define the agile backlog and direct the efforts of 20 offshore developers working on the project",
+                        aspects:["People Management","Team Management"]
+                    }
+                ],
+            otherSkills:
+                [
+                    {description:"Financial Markets"
+                      ,aspects:["Business"]},
+                    {description:"Wealth Management",aspects:["Business"]},
+                    {description:"Exchange Data",aspects:["Business"]},
+                    {description:"Market Data",aspects:["Business"]},
+                    {description:"Cross Symbology",aspects:["Business"]},
+                    {description:"Reuters",aspects:["Business"]},
+                    {description:"Time Series",aspects:["Business"]},
+                    {description:"Fundamentals",aspects:["Business"]},
+                    {description:"Quote Data",aspects:["Business"]},
+                    {description:"News Feed",aspects:["Business"]},
+                    {description:"CSS3",aspects:["Technical","User Interface"]},
+                    {description:"HTML5",aspects:["Technical","User Interface"]},
+                    {description:"Responsive Design",aspects:["Technical","User Interface"]},
+                    {description:"RESTful Api Design",aspects:["Technical","API"]},
+                    {description:"OpenSocial",aspects:["Technical"]},
+                    {description:"User Story",aspects:["Business"]},
+                    {description:"HTML Widget",aspects:["Technical"]},
+                    {description:"App Store",aspects:["Business"]},
+                    {description:"Data Visualisation",aspects:["User Interface"]},
+                    {description:"Books And Records",aspects:["API"]},
+                    {description:"Data Mashups",aspects:["Technical","API"]},
+                    {description:"Access",aspects:["Technical","Data Analysis"]},
+                    {description:"SQL Server",aspects:["Technical","Data Analysis"]},
+                    {description:"MVP",aspects:["Business"]}
+                ]
+            }
+        ]
+    ).
     value('localisation', {
         localise: function(locale,key) {
             switch (locale.toLowerCase())
@@ -617,5 +682,3 @@ myAppServices.factory('myLocationBroadcaster',function($rootScope) {
 
     return locationBroadcaster;
 });
-
-
